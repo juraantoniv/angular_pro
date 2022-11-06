@@ -14,9 +14,9 @@ export class AllComponetComponent implements OnInit {
 
   ngOnInit(): void {
     this.AllServicesService.getAll().subscribe( value=> {
+
       this.episodes=value
-    })
-
-  }
-
+      console.log(this.episodes)
+    }
+)}
 }
