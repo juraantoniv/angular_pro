@@ -14,4 +14,7 @@ export class AllServicesService {
   getAll(): Observable<IEpisode[]> {
     return this.httpClient.get<IEpisode[]>(urls.episode)
   }
+  getAllById(id:string): Observable<IEpisode> {
+    return this.httpClient.get<IEpisode>(`${urls.episode}/${id}`)
+  }
 }

@@ -1,4 +1,8 @@
-<div>{{episodes.id}}</div>
-<div>{{episodes.name}}</div>
-<div>{{episodes.air_date}}</div>
-<div>{{episodes.episode}}</div>
+
+<div class="box">
+
+  <div>{{episodes.id}}</div>
+  <div>{{episodes.name}}</div>
+  <div>{{episodes.air_date}}</div>
+ <button routerLink="{{episodes.id}}" [state]="episodes">{{episodes.episode}}</button>
+</div>

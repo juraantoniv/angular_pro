@@ -4,9 +4,8 @@ import {AllComponetComponent} from "./all.componet/all.componet.component";
 import {CharactersComponent} from "./characters/characters.component";
 
 const routes: Routes = [
-  { path:'', component:AllComponetComponent,children:[
-      {path:':id',component:CharactersComponent}
-    ]}
+  { path:'', component:AllComponetComponent},
+  {path:':id',component:CharactersComponent}
 ];
 
 @NgModule({

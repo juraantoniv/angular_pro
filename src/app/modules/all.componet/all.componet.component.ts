@@ -10,13 +10,16 @@ import {AllServicesService} from "../services/all.services.service";
 export class AllComponetComponent implements OnInit {
   episodes:IEpisode[]
 
+
   constructor(private AllServicesService:AllServicesService) { }
 
   ngOnInit(): void {
     this.AllServicesService.getAll().subscribe( value=> {
+      // @ts-ignore
+      this.episodes=value?.results.map((item) =>{
+        return item
+      } )
 
-      this.episodes=value
-      console.log(this.episodes)
     }
 )}
 }
